@@ -2,7 +2,7 @@
 #include "Serviciu.h"
 #include "Stilist.h"
 
-int x1, v[6];
+int x1, v[7];
 
 int main() {
 
@@ -47,10 +47,9 @@ std::cout<<"separate printr-un spatiu: "<<std::endl<<
 int total_pret=0;
 int total_durata=0;
 int x;
-int numar_servicii_dorite;
+int numar_servicii_dorite = 0;
 
 std::cin>>numar_servicii_dorite;
-
 std::cout<<"Introduceti indicii serviciilor dorite: "<<std::endl;
 for(int i=0; i<numar_servicii_dorite;i++) {
     std::cin>>v[i];
