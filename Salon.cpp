@@ -11,28 +11,28 @@ Salon::Salon(const std::string &adresa_, int numar_salon_, int numar_strada_) {
     this->numar_strada = numar_strada_;
 }
 
-void Salon::setAdresa(const std::string& Adresa){
-    this->adresa= Adresa;
-}
+//void Salon::setAdresa(const std::string& Adresa){
+//    this->adresa= Adresa;
+//}
 std::string Salon::getAdresa() const {
     return this->adresa;
 
 }
-void Salon::setNumar_strada(const int numar_strada_){
-    this->numar_strada= numar_strada_;
-}
+//void Salon::setNumar_strada(const int numar_strada_){
+  //  this->numar_strada= numar_strada_;
+//}
 
 int Salon::getNumar_strada() const {
-    return this->numar_strada;
+   return this->numar_strada;
 }
 
-void Salon::setNumar_salon(const int numar_salon_) {
-    this->numar_salon= numar_salon_;
-}
+//void Salon::setNumar_salon(const int numar_salon_) {
+//    this->numar_salon= numar_salon_;
+//}
 
-int Salon::getNumar_salon() const {
-    return this->numar_salon;
-}
+//int Salon::getNumar_salon() const {
+//    return this->numar_salon;
+//}
 
 //destructor
 //Salon::~Salon()

@@ -24,18 +24,18 @@ public:
       {  std::cout<<"constructor de copiere Salon";
       }
 
-    void setAdresa(const std::string& adresa_);
+    //void setAdresa(const std::string& adresa_);
     std::string getAdresa() const;
 
-    void setNumar_salon(int numar_salon_);
-    int getNumar_salon() const;
+    //void setNumar_salon(int numar_salon_);
+    //int getNumar_salon() const;
 
-    void setNumar_strada(int numar_strada_);
+    //void setNumar_strada(int numar_strada_);
     int getNumar_strada() const;
 
 
 
-    Salon& operator=(const Salon &other);
+   // Salon& operator=(const Salon &other);
 
 };
 
