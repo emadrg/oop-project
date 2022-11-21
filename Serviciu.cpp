@@ -3,27 +3,47 @@
 //
 
 #include "Serviciu.h"
+#include <iostream>
 
-Serviciu::Serviciu(const int& durata_, const int& pret_) {
-    durata=durata_;
-    pret=pret_;
 
+Serviciu::Serviciu(int numar_serviciu_, std::string nume_, const int& durata_, const int& pret_) {
+    this->numar_serviciu = numar_serviciu_;
+    this->nume = nume_;
+    this->durata = durata_;
+    this->pret = pret_;
 }
 
-Serviciu::Serviciu() {
-    this->durata = 0;
-    this->pret = 12;
+/*void Serviciu::setNumar_serviciu(const int &numar_serviciu_) {
+    this->numar_serviciu=numar_serviciu_;
 }
 
+int Serviciu::getNumar_serviciu() const {
+    return numar_serviciu;
+}*/
 
-void Serviciu::setDurata(const int &durata_) {
+/*void Serviciu::setNume(std::string &nume_) {
+    this->nume=nume_;
+}*/
+
+ std::string Serviciu::getNume() {
+    return nume;
+}
+
+/*void Serviciu::setDurata(const int &durata_) {
     this->durata=durata_;
 
+}*/
+ int Serviciu::getDurata() const {
+    return durata;
 }
 
-void Serviciu::setPret(const int &pret_) {
+
+/*void Serviciu::setPret(const int &pret_) {
     this->pret=pret_;
 
+}*/
+
+  int Serviciu::getPret() const {
+    return pret;
+
 }
-
-

@@ -5,30 +5,43 @@
 #include "Salon.h"
 
 //constructor
-Salon::Salon(const std::string &adresa_, const int numar_, const int numar2_) {
+Salon::Salon(const std::string &adresa_, int numar_salon_, int numar_strada_) {
     this->adresa = adresa_;
-    this->numar = numar_;
-    this->numar2 = numar2_;
-}
-//destructor
-Salon::~Salon() {
-
-}
-//setter
-void Salon::setAdresa(const std::string& adresa_) {
-    this->adresa = adresa_;
+    this->numar_salon = numar_salon_;
+    this->numar_strada = numar_strada_;
 }
 
-//getter
+void Salon::setAdresa(const std::string& Adresa){
+    this->adresa= Adresa;
+}
 std::string Salon::getAdresa() const {
     return this->adresa;
+
+}
+void Salon::setNumar_strada(const int numar_strada_){
+    this->numar_strada= numar_strada_;
 }
 
+int Salon::getNumar_strada() const {
+    return this->numar_strada;
+}
 
-//operator de copiere
+void Salon::setNumar_salon(const int numar_salon_) {
+    this->numar_salon= numar_salon_;
+}
+
+int Salon::getNumar_salon() const {
+    return this->numar_salon;
+}
+
+//destructor
+//Salon::~Salon()
+
+/*operator de copiere
 Salon &Salon::operator=(const Salon &other) {
-    adresa=other.adresa;
-    numar=other.numar;
-    numar2=other.numar2;
+    this->adresa=other.adresa;
+    this->numar_salon=other.numar_salon;
+    this->numar_strada=other.numar_strada;
     return *this;
 }
+*/
