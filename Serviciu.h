@@ -11,7 +11,6 @@
 
 class Serviciu {
 private:
-    int numar_serviciu;
     std::string nume;
     int durata;//minute
     int pret;
@@ -19,7 +18,7 @@ private:
 
 public:
 
-     Serviciu(int numar_serviciu_, std::string nume_, const int& durata_, const int& pret_);
+     Serviciu( std::string nume_, const int& durata_, const int& pret_);
 
      //const std::string &getNume() const;
 

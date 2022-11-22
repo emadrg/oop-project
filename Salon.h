@@ -14,13 +14,12 @@
 class Salon {
 private:
     std::string adresa;
-    int numar_salon;
     int numar_strada;
     //std::vector<Stilist> stilisti;
 public:
-    Salon(const std::string& adresa_, int numar_salon_, int numar_strada_);
+    Salon(const std::string& adresa_, int numar_strada_);
    // ~Salon();
-    Salon(const Salon& other): adresa{other.adresa}, numar_salon{other.numar_salon}, numar_strada{other.numar_strada}
+    Salon(const Salon& other): adresa{other.adresa}, numar_strada{other.numar_strada}
       {  std::cout<<"constructor de copiere Salon";
       }
 

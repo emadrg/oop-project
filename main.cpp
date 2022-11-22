@@ -6,17 +6,17 @@ int x1, v[7];
 
 int main() {
 
-    Salon s1("Mihai Bravu", 1, 12);
-    Salon s2("Bulevardul Unirii", 2, 15);
-    Salon s3("Bulevardul Elisabeta", 3, 16);
-    Salon s4("Strada Castanilor", 4, 78);
+    Salon s1("Mihai Bravu", 12);
+    Salon s2("Bulevardul Unirii" , 15);
+    Salon s3("Bulevardul Elisabeta", 16);
+    Salon s4("Strada Castanilor", 78);
 
-    Serviciu serv1(1, "Manichiura", 120, 120);
-    Serviciu serv2(2, "Pedichiura", 100, 150);
-    Serviciu serv3(3, "Tuns femei", 60, 70);
-    Serviciu serv4(4, "Tuns barbati", 40, 50);
-    Serviciu serv5(5, "Vopsit", 200, 500);
-    Serviciu serv6(6, "Machiaj", 100, 200);
+    Serviciu serv1( "Manichiura", 120, 120);
+    Serviciu serv2( "Pedichiura", 100, 150);
+    Serviciu serv3( "Tuns femei", 60, 70);
+    Serviciu serv4( "Tuns barbati", 40, 50);
+    Serviciu serv5( "Vopsit", 200, 500);
+    Serviciu serv6( "Machiaj", 100, 200);
 
     Stilist stil1("Ioana", "Popa");
     Stilist stil2("Andreea", "Simion");

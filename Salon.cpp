@@ -5,9 +5,8 @@
 #include "Salon.h"
 
 //constructor
-Salon::Salon(const std::string &adresa_, int numar_salon_, int numar_strada_) {
+Salon::Salon(const std::string &adresa_, int numar_strada_) {
     this->adresa = adresa_;
-    this->numar_salon = numar_salon_;
     this->numar_strada = numar_strada_;
 }
 
