@@ -12,15 +12,20 @@ private:
     std::string nume;
 
 public:
-    Stilist(const std::string& prenume_, const std::string& nume_);
+    Stilist (int k=0, int l=0) {
+        nume=k;
+        prenume=l;
+    }
 
-   // void setPrenume(const std::string& prenume_p);
+    Stilist(const std::string& prenume_, const std::string& nume_);
 
     std::string getPrenume ();
 
-   // void setNume(const std:: string& nume_p);
-
     std::string getNume();
+
+    // void setPrenume(const std::string& prenume_p);
+
+    // void setNume(const std:: string& nume_p);
 
    // const std::string &getNume () const;
 };
