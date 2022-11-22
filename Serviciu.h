@@ -29,10 +29,10 @@ public:
    std::string getNume();
 
    //void setDurata(const int& durata_);
-   int getDurata() const;
+  [[nodiscard]] int getDurata() const;
 
    //void setPret(const int& pret_);
-   int getPret() const;
+   [[nodiscard]] int getPret() const;
 
 };
 

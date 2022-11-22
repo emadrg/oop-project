@@ -24,13 +24,13 @@ public:
       }
 
     //void setAdresa(const std::string& adresa_);
-    std::string getAdresa() const;
+    [[nodiscard]] std::string getAdresa() const;
 
     //void setNumar_salon(int numar_salon_);
     //int getNumar_salon() const;
 
     //void setNumar_strada(int numar_strada_);
-    int getNumar_strada() const;
+    [[nodiscard]] int getNumar_strada() const;
 
 
 
