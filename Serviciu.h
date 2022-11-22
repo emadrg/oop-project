@@ -18,7 +18,7 @@ private:
 
 public:
 
-     Serviciu( std::string nume_, const int& durata_, const int& pret_);
+     Serviciu( const std::string& nume_, const int& durata_, const int& pret_);
 
      //const std::string &getNume() const;
 

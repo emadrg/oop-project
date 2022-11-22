@@ -6,7 +6,7 @@
 #include <iostream>
 
 
-Serviciu::Serviciu( std::string nume_, const int& durata_, const int& pret_) {
+Serviciu::Serviciu( const std::string& nume_, const int& durata_, const int& pret_) {
     this->nume = nume_;
     this->durata = durata_;
     this->pret = pret_;
