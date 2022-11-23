@@ -4,11 +4,12 @@
 
 #include "Stilist.h"
 
-Stilist::Stilist(const std::string& prenume_, const std::string& nume_) {
-
-    prenume=prenume_;
-    nume=nume_;
-}
+//Stilist::Stilist(std::string& prenume_, std::string& nume_) {
+//
+//    prenume=prenume_;
+//    nume=nume_;
+//}
+Stilist::Stilist( const std::string& prenume_, const std::string& nume_): prenume(prenume_), nume(nume_){};
 
 std::string Stilist::getNume() {
     return nume;
