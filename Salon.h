@@ -19,9 +19,9 @@ private:
 public:
     Salon(const std::string& adresa_, int numar_strada_);
    // ~Salon();
-    Salon(const Salon& other): adresa{other.adresa}, numar_strada{other.numar_strada}
-      {  std::cout<<"constructor de copiere Salon";
-      }
+    //Salon(const Salon& other): adresa{other.adresa}, numar_strada{other.numar_strada}
+      //{  std::cout<<"constructor de copiere Salon";
+      //}
 
     //void setAdresa(const std::string& adresa_);
     [[nodiscard]] std::string getAdresa() const;
