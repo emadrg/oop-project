@@ -46,41 +46,39 @@ std::cout<<"separate printr-un spatiu: "<<std::endl<<
 
 int total_pret=0;
 int total_durata=0;
-int x;
 int numar_servicii_dorite = 0;
 
 std::cin>>numar_servicii_dorite;
 std::cout<<"Introduceti indicii serviciilor dorite: "<<std::endl;
 for(int i=0; i<numar_servicii_dorite;i++) {
     std::cin>>v[i];
-    x=v[i];
-    if (x==1) {
+    if (v[i]==1) {
         total_pret = total_pret + serv1.getPret();
         total_durata = total_durata + serv1.getDurata();
         std::cout<<serv1.getNume()<<" va fi realizata de stilistul "<<stil1.getPrenume()<<" "<<stil1.getNume()<<std::endl;
 
     }
-    if (x==2) {
+    if (v[i]==2) {
         total_pret = total_pret + serv2.getPret();
         total_durata = total_durata + serv2.getDurata();
         std::cout<<serv2.getNume()<<" va fi realizata de stilistul "<<stil2.getPrenume()<<" "<<stil2.getNume()<<std::endl;
     }
-    if(x==3) {
+    if(v[i]==3) {
         total_pret = total_pret + serv3.getPret();
         total_durata = total_durata + serv3.getDurata();
         std::cout<<serv3.getNume()<<" va fi realizata de stilistul "<<stil3.getPrenume()<<" "<<stil3.getNume()<<std::endl;
     }
-    if(x==4) {
+    if(v[i]==4) {
         total_pret = total_pret + serv4.getPret();
         total_durata = total_durata + serv4.getDurata();
         std::cout<<serv4.getNume()<<" va fi realizata de stilistul "<<stil4.getPrenume()<<" "<<stil4.getNume()<<std::endl;
     }
-    if(x==5) {
+    if(v[i]==5) {
         total_pret = total_pret + serv5.getPret();
         total_durata = total_durata + serv5.getDurata();
         std::cout<<serv5.getNume()<<" va fi realizata de stilistul "<<stil5.getPrenume()<<" "<<stil5.getNume()<<std::endl;
     }
-    if(x==6) {
+    if(v[i]==6) {
         total_pret = total_pret + serv6.getPret();
         total_durata = total_durata + serv6.getDurata();
         std::cout<<serv6.getNume()<<" va fi realizata de stilistul "<<stil6.getPrenume()<<" "<<stil6.getNume()<<std::endl;
