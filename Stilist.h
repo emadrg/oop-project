@@ -5,6 +5,8 @@
 #ifndef OOP_STILIST_H
 #define OOP_STILIST_H
 #include <string>
+#include "Salon.h"
+#include <vector>
 
 class Stilist {
 private:
@@ -13,10 +15,7 @@ private:
 
 public:
 
-    //Stilist(const std::string& prenume_, const std::string& nume_);
-    Stilist( std::string prenume_, std::string nume_) ;
-//  Stilist(const std::string& prenume_, const std::string& nume_):
-//     prenume(const std::string& prenume), nume(const::std string& nume);
+    Stilist( const std::string& prenume_, const std::string& nume_) ;
 
     std::string getPrenume ();
 

@@ -3,39 +3,35 @@
 //
 
 #include "Salon.h"
+#include "Stilist.h"
+#include <vector>
 
 //constructor
-Salon::Salon(const std::string &adresa_, int numar_strada_) {
+Salon::Salon(int id_salon_, const std::string &adresa_, int numar_strada_, std::vector<Stilist *> stilisti_) {
+    this->id_salon= id_salon_;
     this->adresa = adresa_;
     this->numar_strada = numar_strada_;
+    for (int i=0; i<12; i++)
+        this->stilisti[i]=stilisti_[i];
 }
 
-//void Salon::setAdresa(const std::string& Adresa){
-//    this->adresa= Adresa;
-//}
 std::string Salon::getAdresa() const {
     return this->adresa;
 
 }
-//void Salon::setNumar_strada(const int numar_strada_){
-  //  this->numar_strada= numar_strada_;
-//}
 
 int Salon::getNumar_strada() const {
    return this->numar_strada;
 }
-
-//void Salon::setNumar_salon(const int numar_salon_) {
-//    this->numar_salon= numar_salon_;
+// int Salon::getId_salon() const {
+//    return this->id_salon;
 //}
 
-//int Salon::getNumar_salon() const {
-//    return this->numar_salon;
+
+//
+//<Stilist> Salon::getStilisti() {
+//    return this->stilisti_;
 //}
-
-//destructor
-//Salon::~Salon()
-
 /*operator de copiere
 Salon &Salon::operator=(const Salon &other) {
     this->adresa=other.adresa;

@@ -4,6 +4,7 @@
 
 #include "Serviciu.h"
 #include <iostream>
+#include <vector>
 
 
 Serviciu::Serviciu( const std::string& nume_, const int& durata_, const int& pret_) {
