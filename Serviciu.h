@@ -6,7 +6,6 @@
 #define OOP_SERVICIU_H
 #include "Stilist.h"
 #include <vector>
-#include <iostream>
 
 
 class Serviciu {

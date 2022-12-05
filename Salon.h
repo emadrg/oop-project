@@ -5,7 +5,6 @@
 #ifndef OOP_SALON_H
 #define OOP_SALON_H
 
-#include <iostream>
 #include <string>
 #include <vector>
 #include "Stilist.h"

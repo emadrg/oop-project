@@ -5,21 +5,25 @@
 #ifndef OOP_STILIST_H
 #define OOP_STILIST_H
 #include <string>
-#include "Salon.h"
 #include <vector>
 
 class Stilist {
 private:
+    int id_stilist;
     std::string prenume;
     std::string nume;
+    std::vector <int> programari;
 
 public:
 
-    Stilist( const std::string& prenume_, const std::string& nume_) ;
+    Stilist( const int id_stilist_, const std::string& prenume_, const std::string& nume_, std::vector<int>& programari_) ;
 
     std::string getPrenume ();
 
     std::string getNume();
+
+   // void add_programare (std::vector<int> programari, int ora);
+
 
     // void setPrenume(const std::string& prenume_p);
 

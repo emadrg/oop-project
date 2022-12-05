@@ -3,11 +3,14 @@
 //
 
 #include "Stilist.h"
-#include <vector>
+#include <iostream>
 
-Stilist::Stilist( const std::string& prenume_, const std::string& nume_) {
+Stilist::Stilist(const int id_stilist_, const std::string& prenume_, const std::string& nume_, std::vector<int>& programari_) {
+    this->id_stilist= id_stilist_;
     this->prenume= prenume_;
     this->nume= nume_;
+    for (int j=0; j<8; j++)
+        this->programari[j]= programari_[j];
 }
 
 std::string Stilist::getPrenume() {
@@ -17,4 +20,7 @@ std::string Stilist::getPrenume() {
 std::string Stilist::getNume() {
     return nume;
 }
+
+
+
 //Stilist::Stilist( std::string prenume_, std::string nume_, Salon salon_) : prenume{std::move(prenume_)}, nume{std::move(nume_), salon{std::move(&salon_)}} {}

@@ -3,7 +3,7 @@
 //
 
 #include "Salon.h"
-#include "Stilist.h"
+//#include "Stilist.h"
 #include <vector>
 
 //constructor
