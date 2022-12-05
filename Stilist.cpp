@@ -9,8 +9,8 @@ Stilist::Stilist(const int id_stilist_, const std::string& prenume_, const std::
     this->id_stilist= id_stilist_;
     this->prenume= prenume_;
     this->nume= nume_;
-    for (int j=0; j<8; j++)
-        this->programari[j]= programari_[j];
+    for (int & j : programari_)
+        this->programari.push_back(j);
 }
 
 std::string Stilist::getPrenume() {
@@ -19,6 +19,10 @@ std::string Stilist::getPrenume() {
 
 std::string Stilist::getNume() {
     return nume;
+}
+
+const std::vector<int> &Stilist::getProgramari() const {
+    return programari;
 }
 
 

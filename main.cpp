@@ -66,6 +66,8 @@ int main() {
     Salon s3(3, "Bulevardul Elisabeta", 16, stilisti3);
     Salon s4(4, "Strada Castanilor", 78, stilisti4);
 
+    std::cout<<"e ok"<<std::endl; ///aici isi ia crash
+
     Serviciu serv1( "Manichiura", 120, 120);
     Serviciu serv2( "Pedichiura", 100, 150);
     Serviciu serv3( "Tuns femei", 60, 70);
@@ -105,27 +107,27 @@ if (x1==1) {
     std::cout << "Selectati o ora din cele disponibile (scrieti ora): " << std::endl;
         if(x2==1)
             for(int i = 0; i < 8; i++)
-                if(pgr1[i]==0)
+                if(stil1.getProgramari()[i]==0)
                 std::cout<<i+8<<" ";
         std::cin>>x3;
         ora=x3-8;
-        add_programare(pgr1, ora);
+        add_programare(stil1.getProgramari(), ora);
 
     if(x2==2)
         for(int i = 0; i < 8; i++)
-            if(pgr2[i]==0)
+            if(stil2.getProgramari()[i]==0)
                 std::cout<<i+8<<" ";
     std::cin>>x3;
     ora=x3-8;
-    add_programare(pgr2, ora);
+    add_programare(stil2.getProgramari(), ora);
 
     if(x2==3)
         for(int i = 0; i < 8; i++)
-            if(pgr3[i]==0)
+            if(stil3.getProgramari()[i]==0)
                 std::cout<<i+8<<" ";
     std::cin>>x3;
     ora=x3-8;
-    add_programare(pgr3, ora);
+    add_programare(stil3.getProgramari(), ora);
 
 
 }
@@ -137,27 +139,28 @@ else if (x1==2) {
     std::cout << "Selectati o ora din cele disponibile (scrieti ora): " << std::endl;
     if(x2==1)
         for(int i = 0; i < 8; i++)
-            if(pgr4[i]==0)
+            if(stil4.getProgramari()[i]==0)
                 std::cout<<i+8<<" ";
     std::cin>>x3;
     ora=x3-8;
-    add_programare(pgr4, ora);
+    add_programare(stil4.getProgramari(), ora);
 
     if(x2==2)
         for(int i = 0; i < 8; i++)
-            if(pgr5[i]==0)
+            if(stil5.getProgramari()[i]==0)
                 std::cout<<i+8<<" ";
     std::cin>>x3;
     ora=x3-8;
-    add_programare(pgr5, ora);
+    add_programare(stil5.getProgramari(), ora);
+
 
     if(x2==3)
         for(int i = 0; i < 8; i++)
-            if(pgr6[i]==0)
+            if(stil6.getProgramari()[i]==0)
                 std::cout<<i+8<<" ";
     std::cin>>x3;
     ora=x3-8;
-    add_programare(pgr6, ora);
+    add_programare(stil6.getProgramari(), ora);
 
 }
 
@@ -170,27 +173,27 @@ else if (x1==3) {
     std::cout << "Selectati o ora din cele disponibile (scrieti ora): " << std::endl;
     if(x2==1)
         for(int i = 0; i < 8; i++)
-            if(pgr7[i]==0)
+            if(stil7.getProgramari()[i]==0)
                 std::cout<<i+8<<" ";
     std::cin>>x3;
     ora=x3-8;
-    add_programare(pgr7, ora);
+    add_programare(stil7.getProgramari(), ora);
 
     if(x2==2)
         for(int i = 0; i < 8; i++)
-            if(pgr8[i]==0)
+            if(stil8.getProgramari()[i]==0)
                 std::cout<<i+8<<" ";
     std::cin>>x3;
     ora=x3-8;
-    add_programare(pgr8, ora);
+    add_programare(stil8.getProgramari(), ora);
 
     if(x2==3)
         for(int i = 0; i < 8; i++)
-            if(pgr9[i]==0)
+            if(stil9.getProgramari()[i]==0)
                 std::cout<<i+8<<" ";
     std::cin>>x3;
     ora=x3-8;
-    add_programare(pgr9, ora);
+    add_programare(stil9.getProgramari(), ora);
 
 }
 else {
@@ -201,27 +204,27 @@ else {
     std::cout << "Selectati o ora din cele disponibile (scrieti ora): " << std::endl;
     if(x2==1)
         for(int i = 0; i < 8; i++)
-            if(pgr10[i]==0)
+            if(stil10.getProgramari()[i]==0)
                 std::cout<<i+8<<" ";
     std::cin>>x3;
     ora=x3-8;
-    add_programare(pgr10, ora);
+    add_programare(stil10.getProgramari(), ora);
 
     if(x2==2)
         for(int i = 0; i < 8; i++)
-            if(pgr11[i]==0)
+            if(stil11.getProgramari()[i]==0)
                 std::cout<<i+8<<" ";
     std::cin>>x3;
     ora=x3-8;
-    add_programare(pgr11, ora);
+    add_programare(stil11.getProgramari(), ora);
 
     if(x2==3)
         for(int i = 0; i < 8; i++)
-            if(pgr12[i]==0)
+            if(stil12.getProgramari()[i]==0)
                 std::cout<<i+8<<" ";
     std::cin>>x3;
     ora=x3-8;
-    add_programare(pgr12, ora);
+    add_programare(stil12.getProgramari(), ora);
 
 }
 

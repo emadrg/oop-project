@@ -22,7 +22,9 @@ public:
 
     std::string getNume();
 
-   // void add_programare (std::vector<int> programari, int ora);
+    const std::vector<int> &getProgramari() const;
+
+    // void add_programare (std::vector<int> programari, int ora);
 
 
     // void setPrenume(const std::string& prenume_p);

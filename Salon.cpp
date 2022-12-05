@@ -5,6 +5,7 @@
 #include "Salon.h"
 //#include "Stilist.h"
 #include <vector>
+#include <iostream>
 
 //constructor
 Salon::Salon(int id_salon_, const std::string &adresa_, int numar_strada_, std::vector<Stilist *> stilisti_) {
@@ -13,6 +14,7 @@ Salon::Salon(int id_salon_, const std::string &adresa_, int numar_strada_, std::
     this->numar_strada = numar_strada_;
     for (int i=0; i<12; i++)
         this->stilisti[i]=stilisti_[i];
+    std::cout << "constructor salon";
 }
 
 std::string Salon::getAdresa() const {
