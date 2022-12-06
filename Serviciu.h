@@ -13,25 +13,17 @@ private:
     std::string nume;
     int durata;//minute
     int pret;
-    //std::vector<Stilist> Stilist_serviciu;
 
 public:
 
      Serviciu( const std::string& nume_, const int& durata_, const int& pret_);
 
-     //const std::string &getNume() const;
+    [[nodiscard]] int getDurata() const;
 
-  // void setNumar_serviciu(const int& numar_serviciu_);
-   //int getNumar_serviciu() const;
+    [[nodiscard]] int getPret() const;
 
-   //void setNume(std::string& nume_);
-   std::string getNume();
+    std::string getNume();
 
-   //void setDurata(const int& durata_);
-  [[nodiscard]] int getDurata() const;
-
-   //void setPret(const int& pret_);
-   [[nodiscard]] int getPret() const;
 
 };
 

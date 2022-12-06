@@ -3,7 +3,6 @@
 //
 
 #include "Salon.h"
-#include <utility>
 #include <vector>
 
 //constructor
@@ -29,15 +28,7 @@ int Salon::getNumar_strada() const {
 std::vector<Stilist *> Salon::getStilisti() const {
     return this->stilisti;
 }
-// int Salon::getId_salon() const {
-//    return this->id_salon;
-//}
 
-
-//
-//<Stilist> Salon::getStilisti() {
-//    return this->stilisti_;
-//}
 /*operator de copiere
 Salon &Salon::operator=(const Salon &other) {
     this->adresa=other.adresa;

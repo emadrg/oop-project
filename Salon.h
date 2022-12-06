@@ -25,25 +25,6 @@ public:
 
     [[nodiscard]] std::vector<Stilist *> getStilisti() const ;
 
-    //[[nondiscard]] int getId_salon() const;
-
-//    [[nodiscard]] <Stilist> getStilisti();
-
-//    void addStilist(Stilist stilist){
-//        this->stilisti.push_back(stilist);
-//    };
-
-    //void setNumar_salon(int numar_salon_);
-    //int getNumar_salon() const;
-    //void setNumar_strada(int numar_strada_);
-    // ~Salon();
-    //Salon(const Salon& other): adresa{other.adresa}, numar_strada{other.numar_strada}
-    //{  std::cout<<"constructor de copiere Salon";
-    //}
-
-    //void setAdresa(const std::string& adresa_);
-
-
 
 };
 

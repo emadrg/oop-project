@@ -18,8 +18,8 @@ void add_programare ( std::vector<int>&  programari, int ora) {
 }
 
 void afis (const std::vector<Stilist *>& vect) {
-        for (auto i : vect)
-            std::cout<<i<<std::endl;
+    for (int i = 0; i < 3; ++i)
+        std::cout << i + 1 << ". " << vect[i]->getNume() << " " << vect[i]->getPrenume() << std::endl;
 }
 
 int main() {
@@ -54,7 +54,6 @@ int main() {
     std::vector <Stilist*> stilisti3;
     std::vector <Stilist*> stilisti4;
 
-    //std::vector<Stilist *> stilisti1(stil1, stil2, stil3);
 
     stilisti1.push_back(&stil1);
     stilisti1.push_back(&stil2);
@@ -108,11 +107,9 @@ std::cin>>x1;
 
 std::cout<<"Alegeti stilistul la care doriti sa faceti programarea: "<<std::endl;
 if (x1==1) {
-//    for (int i = 0; i < 3; i++)
         afis(s1.getStilisti());
-//        std::cout << s1.getStilisti()[i] << std::endl;
     std::cin >> x2;//aici putem avea vectorii pgr1-pgr3
-std::cout<<"e ok";
+
     std::cout << "Selectati o ora din cele disponibile (scrieti ora): " << std::endl;
         if(x2==1)
             for(int i = 0; i < 8; i++)
@@ -141,8 +138,6 @@ std::cout<<"e ok";
 
 }
 else if (x1==2) {
-//    for (int i = 0; i < 3; i++)
-//        std::cout << s2.getStilisti()[i] << std::endl;
 afis( s2.getStilisti());
     std::cin >> x2;//aici putem avea vectorii pgr4-pgr6
 
@@ -175,9 +170,6 @@ afis( s2.getStilisti());
 }
 
 else if (x1==3) {
-//
-//    for (int i = 0; i < 3; i++)
-//        std::cout << s3.getStilisti()[i] << std::endl;
 afis(s3.getStilisti());
     std::cin >> x2;//aici putem avea vectorii pgr7-pgr9
 
@@ -208,8 +200,6 @@ afis(s3.getStilisti());
 
 }
 else {
-//    for (int i = 0; i < 3; i++)
-//        std::cout << s4.getStilisti()[i] << std::endl;
 afis(s3.getStilisti());
     std::cin >> x2;//aici putem avea vectorii pgr10-pgr12
 

@@ -24,6 +24,3 @@ std::string Stilist::getNume() {
     return programari;
 }
 
-
-
-//Stilist::Stilist( std::string prenume_, std::string nume_, Salon salon_) : prenume{std::move(prenume_)}, nume{std::move(nume_), salon{std::move(&salon_)}} {}

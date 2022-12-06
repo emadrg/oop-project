@@ -24,14 +24,6 @@ public:
 
     [[nodiscard]] std::vector<int> &getProgramari() ;
 
-    // void add_programare (std::vector<int> programari, int ora);
-
-
-    // void setPrenume(const std::string& prenume_p);
-
-    // void setNume(const std:: string& nume_p);
-
-   // const std::string &getNume () const;
 };
 
 #endif //OOP_STILIST_H
