@@ -16,13 +16,13 @@ private:
 
 public:
 
-    Stilist( const int id_stilist_, const std::string& prenume_, const std::string& nume_, std::vector<int>& programari_) ;
+    Stilist( int id_stilist_, const std::string& prenume_, const std::string& nume_, std::vector<int>& programari_) ;
 
     std::string getPrenume ();
 
     std::string getNume();
 
-    const std::vector<int> &getProgramari() const;
+    [[nodiscard]] std::vector<int> &getProgramari() ;
 
     // void add_programare (std::vector<int> programari, int ora);
 

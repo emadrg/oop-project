@@ -23,6 +23,8 @@ public:
 
     [[nodiscard]] int getNumar_strada() const;
 
+    [[nodiscard]] std::vector<Stilist *> getStilisti() const ;
+
     //[[nondiscard]] int getId_salon() const;
 
 //    [[nodiscard]] <Stilist> getStilisti();

@@ -3,18 +3,18 @@
 //
 
 #include "Salon.h"
-//#include "Stilist.h"
+#include <utility>
 #include <vector>
-#include <iostream>
 
 //constructor
 Salon::Salon(int id_salon_, const std::string &adresa_, int numar_strada_, std::vector<Stilist *> stilisti_) {
     this->id_salon= id_salon_;
     this->adresa = adresa_;
     this->numar_strada = numar_strada_;
-    for (int i=0; i<12; i++)
-        this->stilisti[i]=stilisti_[i];
-    std::cout << "constructor salon";
+//    for (size_t i=0; i < stilisti_.size(); i++)
+//        this->stilisti[i]=stilisti_[i];
+    this->stilisti=std::move(stilisti_);
+
 }
 
 std::string Salon::getAdresa() const {
@@ -24,6 +24,10 @@ std::string Salon::getAdresa() const {
 
 int Salon::getNumar_strada() const {
    return this->numar_strada;
+}
+
+std::vector<Stilist *> Salon::getStilisti() const {
+    return this->stilisti;
 }
 // int Salon::getId_salon() const {
 //    return this->id_salon;

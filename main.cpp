@@ -5,15 +5,21 @@
 #include <vector>
 
 
-void add_programare (std::vector<int> programari, int& ora) {
-
-    if (programari[ora]==0) {
+void add_programare ( std::vector<int>&  programari, int ora) {
+    if (ora<0||ora>8)
+        std::cout<<"introduceti o ora valida"<<std::endl;
+    else if (programari[ora]==0) {
         programari[ora]=1;
         std::cout<<"programare efectuata"<<std::endl;
     }
 
     else std::cout<<"nu se poate efectua programare; locul este deja ocupat. va rugam sa selectati alta ora"<<std::endl;
 
+}
+
+void afis (const std::vector<Stilist *>& vect) {
+        for (auto i : vect)
+            std::cout<<i<<std::endl;
 }
 
 int main() {
@@ -48,6 +54,8 @@ int main() {
     std::vector <Stilist*> stilisti3;
     std::vector <Stilist*> stilisti4;
 
+    //std::vector<Stilist *> stilisti1(stil1, stil2, stil3);
+
     stilisti1.push_back(&stil1);
     stilisti1.push_back(&stil2);
     stilisti1.push_back(&stil3);
@@ -66,7 +74,6 @@ int main() {
     Salon s3(3, "Bulevardul Elisabeta", 16, stilisti3);
     Salon s4(4, "Strada Castanilor", 78, stilisti4);
 
-    std::cout<<"e ok"<<std::endl; ///aici isi ia crash
 
     Serviciu serv1( "Manichiura", 120, 120);
     Serviciu serv2( "Pedichiura", 100, 150);
@@ -75,7 +82,7 @@ int main() {
     Serviciu serv5( "Vopsit", 200, 500);
     Serviciu serv6( "Machiaj", 100, 200);
 
-    int x1, x2, x3, ora;
+    int x1, x2, x3, ora, x_serviciu;
 
     std::cout<<"Selectati serviciul dorit: "<<std::endl<<
              "1. Manichiura"<<std::endl<<
@@ -85,25 +92,27 @@ int main() {
              "5. Vopsit"<<std::endl<<
              "6. Machiaj";
 
-std::cout<<"Selectati salonul la care doriti sa mergeti, introducand numarul corespunzator acestuia:"<<std::endl;
+    std::cin>>x_serviciu;
+
+std::cout<<"Selectati salonul la care doriti sa mergeti:"<<std::endl;
 std::cout<<"1. Mihai Bravu 22"<<std::endl<<
 "2. Bulevardul Unirii 15"<<std::endl<<
 "3. Bulevardul Elisabeta 16"<<std::endl<<
-"4. Strada Castanilor 78";
+"4. Strada Castanilor 78"<<std::endl;
 
 //x1- selectam salon
 //x2- selectam stilist
 //x3- selectam ora
 
-//std::vector<int> v(8,0);
 std::cin>>x1;
 
-std::cout<<"Alegeti stilistul la care doriti sa faceti programarea, introducand indicele corespunzator acestuia: ";
+std::cout<<"Alegeti stilistul la care doriti sa faceti programarea: "<<std::endl;
 if (x1==1) {
-    for (int i = 0; i < 3; i++)
-        std::cout << stilisti1[i] << std::endl;
+//    for (int i = 0; i < 3; i++)
+        afis(s1.getStilisti());
+//        std::cout << s1.getStilisti()[i] << std::endl;
     std::cin >> x2;//aici putem avea vectorii pgr1-pgr3
-
+std::cout<<"e ok";
     std::cout << "Selectati o ora din cele disponibile (scrieti ora): " << std::endl;
         if(x2==1)
             for(int i = 0; i < 8; i++)
@@ -132,8 +141,9 @@ if (x1==1) {
 
 }
 else if (x1==2) {
-    for (int i = 0; i < 3; i++)
-        std::cout << stilisti2[i] << std::endl;
+//    for (int i = 0; i < 3; i++)
+//        std::cout << s2.getStilisti()[i] << std::endl;
+afis( s2.getStilisti());
     std::cin >> x2;//aici putem avea vectorii pgr4-pgr6
 
     std::cout << "Selectati o ora din cele disponibile (scrieti ora): " << std::endl;
@@ -165,9 +175,10 @@ else if (x1==2) {
 }
 
 else if (x1==3) {
-
-    for (int i = 0; i < 3; i++)
-        std::cout << stilisti3[i] << std::endl;
+//
+//    for (int i = 0; i < 3; i++)
+//        std::cout << s3.getStilisti()[i] << std::endl;
+afis(s3.getStilisti());
     std::cin >> x2;//aici putem avea vectorii pgr7-pgr9
 
     std::cout << "Selectati o ora din cele disponibile (scrieti ora): " << std::endl;
@@ -197,8 +208,9 @@ else if (x1==3) {
 
 }
 else {
-    for (int i = 0; i < 3; i++)
-        std::cout << stilisti4[i] << std::endl;
+//    for (int i = 0; i < 3; i++)
+//        std::cout << s4.getStilisti()[i] << std::endl;
+afis(s3.getStilisti());
     std::cin >> x2;//aici putem avea vectorii pgr10-pgr12
 
     std::cout << "Selectati o ora din cele disponibile (scrieti ora): " << std::endl;
@@ -227,64 +239,5 @@ else {
     add_programare(stil12.getProgramari(), ora);
 
 }
-
-//"Introduceti numarul de servicii dorite: "<<std::endl;
-//
-//
-//int total_pret=0;
-//int total_durata=0;
-//int numar_servicii_dorite = 0;
-//
-//std::cin>>numar_servicii_dorite;
-//std::cout<<"Introduceti indicii serviciilor dorite: "<<std::endl;
-//for(int i=0; i<numar_servicii_dorite;i++) {
-//    std::cin>>v[i];
-//    if (v[i]==1) {
-//        total_pret = total_pret + serv1.getPret();
-//        total_durata = total_durata + serv1.getDurata();
-//        std::cout<<serv1.getNume()<<" va fi realizata de stilistul "<<stil1.getPrenume()<<" "<<stil1.getNume()<<std::endl;
-//
-//    }
-//    if (v[i]==2) {
-//        total_pret = total_pret + serv2.getPret();
-//        total_durata = total_durata + serv2.getDurata();
-//        std::cout<<serv2.getNume()<<" va fi realizata de stilistul "<<stil2.getPrenume()<<" "<<stil2.getNume()<<std::endl;
-//    }
-//    if(v[i]==3) {
-//        total_pret = total_pret + serv3.getPret();
-//        total_durata = total_durata + serv3.getDurata();
-//        std::cout<<serv3.getNume()<<" va fi realizata de stilistul "<<stil3.getPrenume()<<" "<<stil3.getNume()<<std::endl;
-//    }
-//    if(v[i]==4) {
-//        total_pret = total_pret + serv4.getPret();
-//        total_durata = total_durata + serv4.getDurata();
-//        std::cout<<serv4.getNume()<<" va fi realizata de stilistul "<<stil4.getPrenume()<<" "<<stil4.getNume()<<std::endl;
-//    }
-//    if(v[i]==5) {
-//        total_pret = total_pret + serv5.getPret();
-//        total_durata = total_durata + serv5.getDurata();
-//        std::cout<<serv5.getNume()<<" va fi realizata de stilistul "<<stil5.getPrenume()<<" "<<stil5.getNume()<<std::endl;
-//    }
-//    if(v[i]==6) {
-//        total_pret = total_pret + serv6.getPret();
-//        total_durata = total_durata + serv6.getDurata();
-//        std::cout<<serv6.getNume()<<" va fi realizata de stilistul "<<stil6.getPrenume()<<" "<<stil6.getNume()<<std::endl;
-//    }
-//}
-//
-//std::cout<<"Rezervarea dumneavoastra este la salonul de la adresa ";
-//if(x1==1)
-//    std::cout<<s1.getAdresa()<<" "<<s1.getNumar_strada();
-//if(x1==2)
-//    std::cout<<s2.getAdresa()<<" "<<s2.getNumar_strada();
-//if(x1==3)
-//    std::cout<<s3.getAdresa()<<" "<<s3.getNumar_strada();
-//if(x1==4)
-//    std::cout<<s4.getAdresa()<<" "<<s4.getNumar_strada();
-//std::cout<<std::endl;
-//
-//
-//std::cout<<"Veti avea de achitat "<<total_pret<<" lei, iar timpul petrecut in salon va fi de "<<total_durata<<" minute";
-
     return 0;
 }
