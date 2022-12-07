@@ -5,7 +5,6 @@
 #include "Salon.h"
 #include <vector>
 
-//constructor
 Salon::Salon(const std::string &adresa_, std::vector<Stilist *> stilisti_) {
     this->adresa = adresa_;
     this->stilisti=std::move(stilisti_);
@@ -16,10 +15,6 @@ std::string Salon::getAdresa() const {
     return this->adresa;
 
 }
-//
-//int Salon::getNumar_strada() const {
-//   return this->numar_strada;
-//}
 
 std::vector<Stilist *> Salon::getStilisti() const {
     return this->stilisti;
