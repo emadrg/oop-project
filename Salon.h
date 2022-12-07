@@ -18,7 +18,7 @@ private:
 public:
     Salon( const std::string& adresa_,  std::vector< Stilist *> stilisti_);
 
-//    [[nodiscard]] std::string getAdresa() const;
+    [[nodiscard]] std::string getAdresa() const;
 //
 //    [[nodiscard]] int getNumar_strada() const;
 

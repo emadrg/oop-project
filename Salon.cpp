@@ -12,10 +12,10 @@ Salon::Salon(const std::string &adresa_, std::vector<Stilist *> stilisti_) {
 
 }
 
-//std::string Salon::getAdresa() const {
-//    return this->adresa;
-//
-//}
+std::string Salon::getAdresa() const {
+    return this->adresa;
+
+}
 //
 //int Salon::getNumar_strada() const {
 //   return this->numar_strada;

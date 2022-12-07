@@ -18,8 +18,6 @@ int alta_ora;
     }
 
     else {
-        //std::cout << "nu se poate efectua programare; locul este deja ocupat. va rugam sa selectati alta ora"
-        //          << std::endl;
         std::cin >> alta_ora;
         add_programare(programari, alta_ora);
     }
@@ -90,17 +88,9 @@ int main() {
     Serviciu serv5( "Vopsit", 200, 500);
     Serviciu serv6( "Machiaj", 100, 200);
 
-    int x1, x2, x3, ora, x_serviciu;
+    int x1, x2, x3, ora, x_serviciu, total_durata=0, total_pret=0;
 
-    std::cout<<"Selectati serviciul dorit: "<<std::endl<<
-             "1. Manichiura"<<std::endl<<
-             "2. Pedichiura"<<std::endl<<
-             "3. Tuns femei"<<std::endl<<
-             "4. Tuns barbati"<<std::endl<<
-             "5. Vopsit"<<std::endl<<
-             "6. Machiaj";
 
-    std::cin>>x_serviciu;
 
 //x1- selectam salon
 //x2- selectam stilist
@@ -108,11 +98,46 @@ int main() {
 
 int ok_rezervare=0;
 while(ok_rezervare==0) {
+    std::cout<<"1. "<<serv1.getNume()<<std::endl;
+    std::cout<<"2. "<<serv2.getNume()<<std::endl;
+    std::cout<<"3. "<<serv3.getNume()<<std::endl;
+    std::cout<<"4. "<<serv4.getNume()<<std::endl;
+    std::cout<<"5. "<<serv5.getNume()<<std::endl;
+    std::cout<<"6. "<<serv6.getNume()<<std::endl;
+
+    std::cin>>x_serviciu;
+    if(x_serviciu==1){
+        total_pret=total_pret+serv1.getPret();
+        total_durata=total_durata+serv1.getDurata();
+    }
+    if(x_serviciu==2){
+        total_pret=total_pret+serv2.getPret();
+        total_durata=total_durata+serv2.getDurata();
+    }
+    if(x_serviciu==3){
+        total_pret=total_pret+serv3.getPret();
+        total_durata=total_durata+serv3.getDurata();
+    }
+    if(x_serviciu==4){
+        total_pret=total_pret+serv4.getPret();
+        total_durata=total_durata+serv4.getDurata();
+    }
+    if(x_serviciu==5){
+        total_pret=total_pret+serv5.getPret();
+        total_durata=total_durata+serv5.getDurata();
+    }
+    if(x_serviciu==6){
+        total_pret=total_pret+serv6.getPret();
+        total_durata=total_durata+serv6.getDurata();
+    }
+
     std::cout<<"Selectati salonul la care doriti sa mergeti:"<<std::endl;
-    std::cout<<"1. Mihai Bravu 22"<<std::endl<<
-             "2. Bulevardul Unirii 15"<<std::endl<<
-             "3. Bulevardul Elisabeta 16"<<std::endl<<
-             "4. Strada Castanilor 78"<<std::endl;
+
+    std::cout<<"1. "<<s1.getAdresa()<<std::endl;
+    std::cout<<"2. "<<s2.getAdresa()<<std::endl;
+    std::cout<<"3. "<<s3.getAdresa()<<std::endl;
+    std::cout<<"4. "<<s4.getAdresa()<<std::endl;
+
     std::cin >> x1;
 
     std::cout << "Alegeti stilistul la care doriti sa faceti programarea: " << std::endl;
@@ -246,7 +271,10 @@ while(ok_rezervare==0) {
     std::cin >> raspuns;
     if (raspuns == "da")
         ok_rezervare = 0;
-    else ok_rezervare = 1;
+    else {
+        ok_rezervare = 1;
+        std::cout<<"veti avea de achitat "<<total_pret<<" lei, iar timoul petrecut in salon va fi de "<<total_durata<<" minute";
+    }
 }
     return 0;
 }
