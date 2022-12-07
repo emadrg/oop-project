@@ -15,7 +15,7 @@ private:
 
 public:
 
-    Stilist( const std::string& prenume_, const std::string& nume_, std::vector<int>& programari_) ;
+    Stilist( const std::string& prenume_, const std::string& nume_, std::vector<int> programari_) ;
 
     std::string getPrenume ();
 

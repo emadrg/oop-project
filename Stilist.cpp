@@ -4,11 +4,13 @@
 
 #include "Stilist.h"
 
+#include <utility>
 
-Stilist::Stilist( const std::string& prenume_, const std::string& nume_, std::vector<int>& programari_) {
+
+Stilist::Stilist( const std::string& prenume_, const std::string& nume_, std::vector<int> programari_) {
     this->prenume= prenume_;
     this->nume= nume_;
-    this->programari= programari_;
+    this->programari= std::move(programari_);
 }
 
 std::string Stilist::getPrenume() {
