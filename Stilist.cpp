@@ -5,8 +5,7 @@
 #include "Stilist.h"
 
 
-Stilist::Stilist(int id_stilist_, const std::string& prenume_, const std::string& nume_, std::vector<int>& programari_) {
-    this->id_stilist= id_stilist_;
+Stilist::Stilist( const std::string& prenume_, const std::string& nume_, std::vector<int>& programari_) {
     this->prenume= prenume_;
     this->nume= nume_;
     this->programari= programari_;

@@ -9,14 +9,13 @@
 
 class Stilist {
 private:
-    int id_stilist;
     std::string prenume;
     std::string nume;
     std::vector <int> programari;
 
 public:
 
-    Stilist( int id_stilist_, const std::string& prenume_, const std::string& nume_, std::vector<int>& programari_) ;
+    Stilist( const std::string& prenume_, const std::string& nume_, std::vector<int>& programari_) ;
 
     std::string getPrenume ();
 

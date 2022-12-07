@@ -6,24 +6,20 @@
 #include <vector>
 
 //constructor
-Salon::Salon(int id_salon_, const std::string &adresa_, int numar_strada_, std::vector<Stilist *> stilisti_) {
-    this->id_salon= id_salon_;
+Salon::Salon(const std::string &adresa_, std::vector<Stilist *> stilisti_) {
     this->adresa = adresa_;
-    this->numar_strada = numar_strada_;
-//    for (size_t i=0; i < stilisti_.size(); i++)
-//        this->stilisti[i]=stilisti_[i];
     this->stilisti=std::move(stilisti_);
 
 }
 
-std::string Salon::getAdresa() const {
-    return this->adresa;
-
-}
-
-int Salon::getNumar_strada() const {
-   return this->numar_strada;
-}
+//std::string Salon::getAdresa() const {
+//    return this->adresa;
+//
+//}
+//
+//int Salon::getNumar_strada() const {
+//   return this->numar_strada;
+//}
 
 std::vector<Stilist *> Salon::getStilisti() const {
     return this->stilisti;
