@@ -14,9 +14,10 @@ while((ora<0||ora>8||programari[ora]!=0)&&nr_incercari<3)
     nr_incercari++;
 }
 if(nr_incercari==3)
-    std::cout<<"puteti selecta ora doar de 3 ori; incercati din nou";
+    std::cout<<"puteti selecta ora doar de 3 ori; incercati din nou"<<std::endl;
 
 programari[ora]=1;
+std::cout<<"programare efectuata"<<std::endl;
 
 }
 
@@ -84,7 +85,8 @@ int main() {
     Serviciu serv5( "Vopsit", 200, 500);
     Serviciu serv6( "Machiaj", 100, 200);
 
-    int x1, x2, x3, ora, x_serviciu, total_durata=0, total_pret=0;
+    int x1=0, x2=0, x3=0, ora=0, x_serviciu=0, total_durata=0, total_pret=0;
+    std::string raspuns;
 
 
 
@@ -98,6 +100,8 @@ int nr_programari=0;
 ///orice client poate face maxim 3 programari
 
 while(ok_rezervare==0&&nr_programari<3) {
+
+    std::cout<<"Selectati serviciul dorit: "<<std::endl;
     std::cout<<"1. "<<serv1.getNume()<<std::endl;
     std::cout<<"2. "<<serv2.getNume()<<std::endl;
     std::cout<<"3. "<<serv3.getNume()<<std::endl;
@@ -268,20 +272,22 @@ while(ok_rezervare==0&&nr_programari<3) {
     nr_programari++;
     if(nr_programari<3) {
         std::cout << "doriti sa faceti si alta programare?(da/nu)";
-        std::string raspuns;
         std::cin >> raspuns;
         if (raspuns == "da")
             ok_rezervare = 0;
         else {
             ok_rezervare = 1;
-        }
-            std::cout << "veti avea de achitat " << total_pret << " lei, iar timoul petrecut in salon va fi de "
+            std::cout << "veti avea de achitat " << total_pret << " lei, iar timpul petrecut in salon va fi de "
                       << total_durata << " minute";
         }
+    }
 
-    else std::cout<<"ati atins numarul maxim de programari"<<std::endl;
-    std::cout << "veti avea de achitat " << total_pret << " lei, iar timoul petrecut in salon va fi de "
-              << total_durata << " minute";
+    else {
+        std::cout << "ati atins numarul maxim de programari" << std::endl;
+        std::cout << "veti avea de achitat " << total_pret << " lei, iar timpul petrecut in salon va fi de "
+                  << total_durata << " minute";
+    }
+
 }
     return 0;
 }
