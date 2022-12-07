@@ -85,7 +85,7 @@ int main() {
     Serviciu serv5( "Vopsit", 200, 500);
     Serviciu serv6( "Machiaj", 100, 200);
 
-    int x1=0, x2=0, x3=0, ora=0, x_serviciu=0, total_durata=0, total_pret=0;
+    int x1=0, x2=0, x3=0, ora, x_serviciu=0, total_durata=0, total_pret=0;
     std::string raspuns;
 
 
