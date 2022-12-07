@@ -5,22 +5,31 @@
 #include <vector>
 
 
-void add_programare ( std::vector<int>&  programari, int ora) {
-int alta_ora;
-    if (ora<0||ora>8) {
-        std::cout << "introduceti o ora valida" << std::endl;
-        std::cin >> alta_ora;
-        add_programare(programari, alta_ora);
-    }
-    else if (programari[ora]==0) {
-        programari[ora]=1;
-        std::cout<<"programare efectuata"<<std::endl;
-    }
+void add_programare ( std::vector<int>&  programari, int &ora) {
 
-    else {
-        std::cin >> alta_ora;
-        add_programare(programari, alta_ora);
-    }
+while(ora<0||ora>8||programari[ora]!=0)
+{
+    std::cout<<"introduceti alta ora: "<<std::endl;
+    std::cin>>ora;
+}
+
+programari[ora]=1;
+//int alta_ora;
+//    if (ora<0||ora>8) {
+//        std::cout << "introduceti o ora valida" << std::endl;
+//        std::cin >> alta_ora;
+//        add_programare(programari, alta_ora);
+//    }
+//    else if (programari[ora]==0) {
+//        programari[ora]=1;
+//        std::cout<<"programare efectuata"<<std::endl;
+//    }
+//    else {
+//        std::cin >> alta_ora;
+//        add_programare(programari, alta_ora);
+//    }
+
+//int alta_ora;
 
 }
 
