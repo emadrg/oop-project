@@ -24,6 +24,8 @@ public:
 
     std::string getNume();
 
+    friend std::ostream& operator<<(std::ostream& os, const Serviciu& st);
+
 
 };
 

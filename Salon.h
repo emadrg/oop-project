@@ -21,7 +21,9 @@ public:
 
     [[nodiscard]] std::vector<Stilist *> getStilisti() const ;
 
+    static void afis (const std::vector<Stilist *>& vect);
 
 };
+
 
 #endif //OOP_SALON_H

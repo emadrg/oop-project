@@ -23,6 +23,9 @@ public:
 
     [[nodiscard]] std::vector<int> &getProgramari() ;
 
+    static void add_programare ( std::vector<int>&  programari, int &ora);
+
+
 };
 
 #endif //OOP_STILIST_H

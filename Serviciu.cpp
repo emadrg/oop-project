@@ -3,6 +3,7 @@
 //
 
 #include "Serviciu.h"
+#include <ostream>
 
 
 Serviciu::Serviciu( const std::string& nume_, const int& durata_, const int& pret_) {
@@ -22,4 +23,8 @@ Serviciu::Serviciu( const std::string& nume_, const int& durata_, const int& pre
   int Serviciu::getPret() const {
     return pret;
 
+}
+    std::ostream& operator<<(std::ostream& os, const Serviciu& st) {
+    os << "Nume serviciu: " << st.nume << ", Durata: " << st.durata << ", Pret: "<<st.pret<< "\n";
+    return os;
 }
