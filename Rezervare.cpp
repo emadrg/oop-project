@@ -56,7 +56,6 @@ Rezervare::Rezervare(const Rezervare& other) : serviciu{other.serviciu}, durata{
     std::cout << "va asteptam la adresa " << r.getLocatie() << std::endl;
 
 }
-
 Rezervare& Rezervare:: operator=(const Rezervare& other) = default;
 
 Rezervare::~Rezervare() = default;
