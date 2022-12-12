@@ -36,7 +36,7 @@ public:
 
     void setLocatie(const std::string &locatie);
 
-    static void afis_rezervare(Rezervare& r);
+    static void afis_rezervare(const Rezervare& r);
 
     virtual ~Rezervare();
 };

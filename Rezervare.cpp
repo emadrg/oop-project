@@ -49,7 +49,7 @@ Rezervare::Rezervare(const Rezervare& other) : serviciu{other.serviciu}, durata{
     std::cout<<"*";
 }
 
- void Rezervare::afis_rezervare(Rezervare &r) {
+ void Rezervare::afis_rezervare(const Rezervare &r) {
     std::cout << "Ati facut o programare la " << r.getServiciu() << std::endl;
     std::cout << "ce va dura " << r.getDurata() << " minute" << std::endl;
     std::cout << "si va costa " << r.getPret() << " lei" << std::endl;
