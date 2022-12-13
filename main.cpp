@@ -4,18 +4,9 @@
 #include "Rezervare.h"
 #include <iostream>
 #include <vector>
-#include <fstream>
 
 
 int main() {
-
-    std::ifstream indata;
-    indata.open("tastatura.txt");
-
-    if(!indata){
-        std::cout<<"fisierul nu se deschide :(";
-        return 0;
-    }
 
     std::vector <int> pgr1(8, 0);
     std::vector <int> pgr2(8, 0);
@@ -100,7 +91,7 @@ std::cout<<"Selectati serviciul dorit: \n";
     operator<<(operator<<(operator<<(operator<<(operator<<(operator<<(std::cout, serv1), serv2), serv3), serv4), serv5), serv6);
 
 
-    indata>>x_serviciu;
+    std::cin>>x_serviciu;
     if(x_serviciu==1){
         rez.setDurata(serv1.getDurata());
         rez.setServiciu(serv1.getNume());
@@ -151,20 +142,20 @@ std::cout<<"Selectati serviciul dorit: \n";
     std::cout<<"3. "<<s3.getAdresa()<<std::endl;
     std::cout<<"4. "<<s4.getAdresa()<<std::endl;
 
-    indata >> x1;
+    std::cin >> x1;
 
     std::cout << "Alegeti stilistul la care doriti sa faceti programarea: " << std::endl;
     if (x1 == 1) {
         rez.setLocatie(s1.getAdresa());
         Salon::afis(s1.getStilisti());
-        indata >> x2;//aici putem avea vectorii pgr1-pgr3
+        std::cin >> x2;//aici putem avea vectorii pgr1-pgr3
 
         std::cout << "Selectati o ora din cele disponibile (scrieti ora): " << std::endl;
         if (x2 == 1) {
             for (int i = 0; i < 8; i++)
                 if (stil1.getProgramari()[i] == 0)
                     std::cout << i + 8 << " ";
-            indata >> x3;
+            std::cin >> x3;
             ora = x3 - 8;
             Stilist::add_programare(stil1.getProgramari(), ora);
         }
@@ -172,7 +163,7 @@ std::cout<<"Selectati serviciul dorit: \n";
             for (int i = 0; i < 8; i++)
                 if (stil2.getProgramari()[i] == 0)
                     std::cout << i + 8 << " ";
-            indata >> x3;
+            std::cin >> x3;
             ora = x3 - 8;
             Stilist::add_programare(stil2.getProgramari(), ora);
         }
@@ -180,7 +171,7 @@ std::cout<<"Selectati serviciul dorit: \n";
             for (int i = 0; i < 8; i++)
                 if (stil3.getProgramari()[i] == 0)
                     std::cout << i + 8 << " ";
-            indata >> x3;
+            std::cin >> x3;
             ora = x3 - 8;
             Stilist::add_programare(stil3.getProgramari(), ora);
         }
@@ -189,14 +180,14 @@ std::cout<<"Selectati serviciul dorit: \n";
     if (x1 == 2) {
         rez.setLocatie(s2.getAdresa());
         Salon::afis(s2.getStilisti());
-        indata >> x2;//aici putem avea vectorii pgr4-pgr6
+        std::cin >> x2;//aici putem avea vectorii pgr4-pgr6
 
         std::cout << "Selectati o ora din cele disponibile (scrieti ora): " << std::endl;
         if (x2 == 1) {
             for (int i = 0; i < 8; i++)
                 if (stil4.getProgramari()[i] == 0)
                     std::cout << i + 8 << " ";
-            indata >> x3;
+            std::cin >> x3;
             ora = x3 - 8;
             Stilist::add_programare(stil4.getProgramari(), ora);
         }
@@ -204,7 +195,7 @@ std::cout<<"Selectati serviciul dorit: \n";
             for (int i = 0; i < 8; i++)
                 if (stil5.getProgramari()[i] == 0)
                     std::cout << i + 8 << " ";
-            indata >> x3;
+            std::cin >> x3;
             ora = x3 - 8;
             Stilist::add_programare(stil5.getProgramari(), ora);
         }
@@ -213,7 +204,7 @@ std::cout<<"Selectati serviciul dorit: \n";
             for (int i = 0; i < 8; i++)
                 if (stil6.getProgramari()[i] == 0)
                     std::cout << i + 8 << " ";
-            indata >> x3;
+            std::cin >> x3;
             ora = x3 - 8;
             Stilist::add_programare(stil6.getProgramari(), ora);
 
@@ -223,14 +214,14 @@ std::cout<<"Selectati serviciul dorit: \n";
     if (x1 == 3) {
         rez.setLocatie(s3.getAdresa());
         Salon::afis(s3.getStilisti());
-        indata >> x2;//aici putem avea vectorii pgr7-pgr9
+        std::cin >> x2;//aici putem avea vectorii pgr7-pgr9
 
         std::cout << "Selectati o ora din cele disponibile (scrieti ora): " << std::endl;
         if (x2 == 1) {
             for (int i = 0; i < 8; i++)
                 if (stil7.getProgramari()[i] == 0)
                     std::cout << i + 8 << " ";
-            indata >> x3;
+            std::cin >> x3;
             ora = x3 - 8;
             Stilist::add_programare(stil7.getProgramari(), ora);
         }
@@ -238,7 +229,7 @@ std::cout<<"Selectati serviciul dorit: \n";
             for (int i = 0; i < 8; i++)
                 if (stil8.getProgramari()[i] == 0)
                     std::cout << i + 8 << " ";
-            indata >> x3;
+            std::cin >> x3;
             ora = x3 - 8;
             Stilist::add_programare(stil8.getProgramari(), ora);
         }
@@ -246,7 +237,7 @@ std::cout<<"Selectati serviciul dorit: \n";
             for (int i = 0; i < 8; i++)
                 if (stil9.getProgramari()[i] == 0)
                     std::cout << i + 8 << " ";
-            indata >> x3;
+            std::cin >> x3;
             ora = x3 - 8;
             Stilist::add_programare(stil9.getProgramari(), ora);
         }
@@ -254,14 +245,14 @@ std::cout<<"Selectati serviciul dorit: \n";
     if (x1 == 4) {
         rez.setLocatie(s4.getAdresa());
         Salon::afis(s4.getStilisti());
-        indata >> x2;//aici putem avea vectorii pgr10-pgr12
+        std::cin >> x2;//aici putem avea vectorii pgr10-pgr12
 
         std::cout << "Selectati o ora din cele disponibile (scrieti ora): " << std::endl;
         if (x2 == 1) {
             for (int i = 0; i < 8; i++)
                 if (stil10.getProgramari()[i] == 0)
                     std::cout << i + 8 << " ";
-            indata >> x3;
+            std::cin >> x3;
             ora = x3 - 8;
             Stilist::add_programare(stil10.getProgramari(), ora);
         }
@@ -269,7 +260,7 @@ std::cout<<"Selectati serviciul dorit: \n";
             for (int i = 0; i < 8; i++)
                 if (stil11.getProgramari()[i] == 0)
                     std::cout << i + 8 << " ";
-            indata >> x3;
+            std::cin >> x3;
             ora = x3 - 8;
             Stilist::add_programare(stil11.getProgramari(), ora);
         }
@@ -277,7 +268,7 @@ std::cout<<"Selectati serviciul dorit: \n";
             for (int i = 0; i < 8; i++)
                 if (stil12.getProgramari()[i] == 0)
                     std::cout << i + 8 << " ";
-            indata >> x3;
+            std::cin >> x3;
             ora = x3 - 8;
             Stilist::add_programare(stil12.getProgramari(), ora);
         }
@@ -305,7 +296,7 @@ std::cout<<"Selectati serviciul dorit: \n";
     }
     if(nr_programari<3) {
         std::cout << "doriti sa faceti si alta programare?(da/nu)";
-        indata >> raspuns;
+        std::cin >> raspuns;
         if (raspuns == "da")
             ok_rezervare = 0;
         else {
@@ -323,6 +314,5 @@ std::cout<<"Selectati serviciul dorit: \n";
 
 }
 
-indata.close();
     return 0;
 }
